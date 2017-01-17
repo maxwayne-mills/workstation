@@ -1,0 +1,45 @@
+[user]
+	email = cmills@opensitesolutions.com
+	name = Clarence Mills
+[push]
+	default = simple
+[core]
+	editor = vi
+[alias]
+	# Show short summary,branch,untracked files and changed content within the files.
+	st = status -sbu -v
+
+	# Show branch name
+	brname = !git branch | grep "^*" | awk '{print $2 }'
+
+	# Show all branches
+	br = branch -av
+	
+	# delete branch
+	brdel = branch -D
+
+	# Show remote repositories
+ 	repo = remote -v
+
+	standup = !git log --reverse --branches --since=$(if [[ "Mon" == "$(date +%a)" ]]; then echo "last friday"; else echo "yesterday"; fi) --author=$(git config --get user.email) --format=format:'%C(cyan) %ad %C(yellow)%h %Creset %s %Cgreen%d' --date=local"
+
+	standup2 = !"git log --reverse --branches --since=$(if [[ "Mon" == "$(date +%a)" ]]; then echo "last friday"; else echo "yesterday"; fi) --author=$(git config --get user.email) --format=format:'%C(cyan) %ad %C(yellow)%h %Creset %s %Cgreen%d' --date=local"
+
+	# Show the current branch name (usefull for shell prompts)
+	brname = !git branch | grep "^*" | awk '{ print $2 }'
+
+	# Show repositories root
+	top = rev-parse --show-toplevel
+
+	churn = !git log --all -M -C --name-only --format='format:' "$@" | sort | grep -v '^$' | uniq -c | sort | awk 'BEGIN {print "count,file"} {print $1 "," $2}'
+	
+	# add -m to comit 
+	ct = !git commit -m
+
+	# remove a remote repository
+	rmrepo = remote remove
+
+	# Pretty log output
+ 	gg= !git log --oneline --abbrev-commit --all --graph --decorate --color
+[credential]
+	helper = cache --timeout=3600
