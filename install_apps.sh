@@ -27,12 +27,18 @@ if [ -f /etc/lsb-release ]; then
 	clear
 	echo "Download and install dropbox"
 	install_dropbox
+
 	clear
 	echo "Installing Debian based packages"
+
 	clear
 	sudo apt-get install google-drive-ocamlfuse
+
 	clear
 	sudo apt-get install git
+
+	clear
+	sudo apt-get install golang
 else
 	echo "this is not a ubuntu system"
 fi
