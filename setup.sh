@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# Setup workstation
+cd /tmp/
+git clone https://github.com/maxwayne-mills/workstation.git
+cd workstation
+cp bash_aliases ~/.bash_aliases
+cp  gitconfig ~/.gitconfig
+./install_apps.sh
