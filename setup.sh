@@ -18,3 +18,5 @@ cd scripts/shell
 # Install vagrant
 ./install_vagrant.sh
 
+# Install Vault
+./install_vault.sh
