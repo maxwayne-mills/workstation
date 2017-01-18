@@ -5,6 +5,7 @@ install_dropbox(){
 # Once you do, your Dropbox folder will be created in your home directory. Download this Python script to control Dropbox from the command line. 
 # For easy access, put a symlink to the script anywhere in your PATH.
 
+# link: https://www.dropbox.com/install-linux
 arch=$(uname -a | awk 'BEGIN {fs=" "};{print $12}')
 if [ "$arch" = "x86_64" ];then
 	dropboxlink=https://www.dropbox.com/download?plat=lnx.x86_64
