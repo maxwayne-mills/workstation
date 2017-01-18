@@ -1,6 +1,10 @@
 #!/bin/bash 
 
 install_dropbox(){
+# If you're running Dropbox on your server for the first time, you'll be asked to copy and paste a link in a working browser to create a new account or add your server to an existing account.
+# Once you do, your Dropbox folder will be created in your home directory. Download this Python script to control Dropbox from the command line. 
+# For easy access, put a symlink to the script anywhere in your PATH.
+
 arch=$(uname -a | awk 'BEGIN {fs=" "};{print $12}')
 if [ "$arch" = "x86_64" ];then
 	dropboxlink=https://www.dropbox.com/download?plat=lnx.x86_64
@@ -17,6 +21,7 @@ else
 fi
 }
 
+# Check if this either a ubunut or Redhat based system
 if [ -f /etc/lsb-release ]; then
 	clear
 	echo "Download and install dropbox"
