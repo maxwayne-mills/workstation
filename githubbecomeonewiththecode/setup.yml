@@ -64,6 +64,7 @@
       - git 
       - httpd
       - php
+      - ansible
 
   - name: Start HTTPD
     service: name=httpd state=started
