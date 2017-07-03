@@ -4,7 +4,7 @@
   tasks:
   
   - sendgrid: 
-      api_key: "SG.0osQ82J2S_G3Rwjkk6UOMw.LkKJBNLk2R_0hiSYVGScz_RiGdqKjirBJJQ6skvh5Zk"
+      api_key: "{{sengrid_key}}"
       from_address: "cmills@opensitesolutions.com"
       to_addresses: 
         - "cmills@opensitesolutions.com"
