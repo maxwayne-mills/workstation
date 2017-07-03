@@ -50,7 +50,7 @@
       group: oss
       mode: 0600
 
-  - name: Give Automata sudo and elevated priviliges with no password required.
+  - name: Give oss user sudo and elevated priviliges with no password required.
     lineinfile:
       dest: /etc/sudoers
       state: present
@@ -65,6 +65,7 @@
       - git 
       - httpd
       - php
+      - ansible
 
   - name: Start HTTPD
     service: name=httpd state=started
