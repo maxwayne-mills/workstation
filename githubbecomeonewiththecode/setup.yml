@@ -34,14 +34,6 @@
       state: present
       key: "{{ lookup('file','.ssh/id_rsa.pub') }}"
 
-  - name: Copy private key to remote oss user
-    copy: 
-      src: .ssh/id_rsa 
-      dest: /home/oss/.ssh/
-      owner: oss
-      group: oss
-      mode: 0600
-
   - name: Copy public key to remote oss user
     copy: 
       src: .ssh/id_rsa.pub
