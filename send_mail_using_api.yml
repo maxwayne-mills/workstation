@@ -1,0 +1,15 @@
+---
+- hosts: localhost
+  gather_facts: true
+  tasks:
+  
+  - sendgrid: 
+      api_key: "{{sengrid_key}}"
+      from_address: "cmills@opensitesolutions.com"
+      to_addresses: 
+        - "cmills@opensitesolutions.com"
+      subject: "Test using ansible"
+      body: "If you are reading this, test was successfull"
+    delegate_to: localhost
+       
+    
