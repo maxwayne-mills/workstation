@@ -10,6 +10,7 @@
   - name: Install libselinux-python Redhat environments
     yum: pkg={{item}} state=latest
     with_items:
+     - epel-release
      - libselinux-python
      - libsemanage-python
     when: ansible_distribution == "CentOS"
@@ -41,7 +42,7 @@
       group: oss
       mode: 0600
 
-  - name: Copy publick key to remote oss user
+  - name: Copy public key to remote oss user
     copy: 
       src: .ssh/id_rsa.pub
       dest: /home/oss/.ssh/
