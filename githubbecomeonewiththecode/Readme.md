@@ -1,4 +1,4 @@
-# Working Environment for domain www.clarencemills.com 
+# Working Environment for domain www.becomeonewiththecode.com 
 
 Execute confgure file
 - configure.sh
