@@ -9,7 +9,7 @@ Vagrant.configure("2") do |config|
   config.vm.provider "virtualbox" do |virt0|
 	virt0.memory = "512"
 	virt0.name = "becomeonewiththecodegithubenv"
-	virt0.gui = false
+	virt0.gui = true
   end
   config.vm.provision "ansible" do |ansible|
 	ansible.verbose = "v"
