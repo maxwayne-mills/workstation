@@ -1,0 +1,17 @@
+
+{% if theme_config.subfooter.enabled %}
+<div class="subfooter-container" style="{% if theme_config.subfooter.color_fg %}color: {{ theme_config.subfooter.color_fg }};{% endif %}">
+
+<div class="container">
+    <div class="footer">
+        <div class="row wrapper padding">
+            <div class="col-xs-12 col-md-12">
+            {% if theme_config.subfooter.content %}
+            <p>{{ theme_config.subfooter.content|markdown }}</p>
+            {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+{% endif %}
