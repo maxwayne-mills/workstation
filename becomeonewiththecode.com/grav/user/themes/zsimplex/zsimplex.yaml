@@ -1,0 +1,7 @@
+# Global theme configurations
+enabled: true             # Set to false to disable this plugin completely
+
+cdn: false                # Load resources from CDN
+
+logo_url: ""              # Logo URL, i.e., "/user/images/logo.svg"
+favicon_url: ""           # Favicon, i.e., "/user/images/ts_favicon.png"
