@@ -1,0 +1,11 @@
+email: cmills@opensitesolutions.com
+fullname: Clarence
+title: Engineer
+state: enabled
+access:
+  admin:
+    login: true
+    super: true
+  site:
+    login: true
+hashed_password: $2y$10$kRPUenLK9Yjm//GHmRklgOzWTlOhNAzOtCZby3shbUNuE0tiQUb2W
