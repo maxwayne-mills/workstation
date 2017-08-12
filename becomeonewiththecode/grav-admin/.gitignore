@@ -3,3 +3,9 @@ cache/*
 assets/*
 user/themes/*
 user/plugins/*
+backup/*
+bin/*
+cache/*
+images/*
+logs/*
+user/config/themes/*
