@@ -9,3 +9,13 @@ cache/*
 images/*
 logs/*
 user/config/themes/*
+vendor/*
+images/*
+tmp/*
+webserver-configs/*
+CHANGELOG.md
+CODE_OF_CONDUCT.md
+CONTRIBUTING.md
+LICENSE.txt
+composer.json
+composer.lock
