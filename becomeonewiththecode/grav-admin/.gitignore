@@ -3,6 +3,7 @@ cache/*
 assets/*
 user/themes/*
 user/plugins/*
+user/config/*
 backup/*
 bin/*
 cache/*
