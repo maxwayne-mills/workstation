@@ -1,2 +1,5 @@
 logs/*
 cache/*
+assets/*
+user/themes/*
+user/plugins/*
