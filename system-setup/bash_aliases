@@ -3,11 +3,38 @@ alias lt='ls -lairt'
 alias ll='ls -laiFZ'
 alias ld='ls -ld'
 alias mv='mv -v'
-alias cp='cp -iv'
+alias cp='cp -rpiv'
 alias cls='clear'
 alias mkdir='mkdir -vp'
 alias rm='rm -v'
-alias netstat='netstat -tulpn'
+alias chmod='chmod -cv'
+alias netstat='netstat -lee'
+
+#Git commands
+alias gco='git ct'
+alias gst='git status -vvbs .'
+alias gust='git unset head'
+alias glg='git gg'
+alias gdiff='git diff'
+alias ga='git add -v'
+alias gap='git add -p'
+alias gcmt='git ct'
+alias grm='git rm -rf'
+alias gh="open \`git remote -v | grep git@github.com | grep fetch | head -1 | cut -f2 | cut -d' ' -f1 | sed -e's/:/\//' -e 's/gits@/http:\/\//'\`"
+alias gpl="git pull"
+alias gp="git push && git status -vvbs ."
+alias gco='git checkout'
+alias gcob='git checkout -b'
+alias gdiff='git diff'
+
+# git delete local branch
+alias gdlb='git branch -d'
+alias gdrb='git push origin --delete'
+
+# Molecule commands
+alias mi='molecule init role --role-name'
+
+# Virtualbox commands
 alias vbl='VBoxManage list vms'
 alias vbc='VBoxManage controlvm $1'
 alias vbu='VBoxManage unregistervm $1'
