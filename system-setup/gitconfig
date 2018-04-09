@@ -1,6 +1,7 @@
 [user]
-	email = cmills@opensitesolutions.com
+	email = clarence.mills@gmail.com
 	name = Clarence Mills
+	signingkey = 7DF546C8
 [push]
 	default = simple
 [core]
@@ -34,12 +35,22 @@
 	churn = !git log --all -M -C --name-only --format='format:' "$@" | sort | grep -v '^$' | uniq -c | sort | awk 'BEGIN {print "count,file"} {print $1 "," $2}'
 	
 	# add -m to comit 
-	ct = !git commit -m
+	ct = !git commit -S -m
 
 	# remove a remote repository
 	rmrepo = remote remove
 
 	# Pretty log output
  	gg= !git log --oneline --abbrev-commit --all --graph --decorate --color
+
+        # git commit --amend
+       gam= !git commit --amend
+
+        open = "!f() { REPO_URL=$(git config remote.origin.url); /usr/bin/google-chrome-stable ${REPO_URL%%.git}; }; f"
+        browse = !git open
 [credential]
 	helper = cache --timeout=3600
+[color]
+	ui = auto
+[diff]
+	ui = auto
