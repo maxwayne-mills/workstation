@@ -1,5 +1,2 @@
-# Development Environment 
+# Setup Linux workstation
 
-- Scripts
-- DevOPS testing
-- testing
